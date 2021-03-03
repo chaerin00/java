@@ -1,0 +1,24 @@
+import java.awt.*;
+public class CanvasDemo 
+{
+	Canvas canvas1,canvas2;
+	public CanvasDemo(){
+		Frame f=new Frame("Canvas Demo");
+		f.setBackground(Color.white);
+
+		canvas1=new Canvas();
+		canvas1.setSize(200,200);
+		canvas1.setBackground(Color.red);
+
+		canvas2=new Canvas();
+		canvas1.setSize(200,200);
+		canvas1.setBackground(Color.blue);
+
+		f.add("North",canvas1);
+		f.add("South",canvas2);
+
+		f.setSize(300,600);
+		f.setVisible(true);
+	}
+	
+}

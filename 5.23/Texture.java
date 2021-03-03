@@ -1,0 +1,34 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.geom.*;
+import java.awt.image.*;
+
+public class Texture extends JPanel  
+{
+	Rectangle2D.Double rect;
+	BufferedImage img;
+	TexturePaint texture;
+	Rectangle imgRect;
+
+	public Texture(){
+		rect=new Rectangle2D.Double(10,10,800,800);
+		Toolkit tool=Toolkit.getDefaultToolkit();
+		Image im=tool.getImage("olaf.PNG");
+		MediaTracker t=new MediaTracker(this);
+		t.addImage(im,0);
+		img=new BufferedImage(im.getWidth(this),im.getHeight(this),BufferedImage.TYPE_INT_RGB);
+		Graphics2D d2=img.createGraphics();
+		d2.drawImage(im,0,0,this);
+		imgRect=new Rectangle(0,0,im.getWidth(this),im.getHeight(this));
+		texture=new TexturePaint(img,imgRect);
+
+	}
+	public void paintComponent(Graphics g){
+		super.paintComponent(g);
+		Graphics2D g2=(Graphics2D)g;
+		g2.setPaint(texture);
+
+		Rectangle2D.Double rect2=new Rectangle2D.Double(200,200,400,400);
+		g2.fill(rect2);
+	}
+}

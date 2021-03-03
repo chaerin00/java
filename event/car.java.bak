@@ -1,0 +1,21 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.awt.image.*;
+import java.io.*;
+import javax.imageio.*;
+
+class car extends JPanel
+{
+	BufferedImage img=null;
+	int x=1,y=1;
+	public car(){
+		try{
+			img=ImageIO.read(new File("car.png"));
+		}catch(IOException e){
+			System.out.println("no image");
+			System.exit(1);
+		}
+
+	}
+}

@@ -1,0 +1,45 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+
+
+
+class ButtonEvent1
+{
+	JFrame f;
+	JPanel panel;
+	JButton b1,b2;
+
+	MyListener listener=new MyListener();
+
+	public ButtonEvent1(){
+		f=new JFrame();
+		f.setSize(300,200);
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		f.setTitle("event");
+		panel=new JPanel();
+
+		b1=new JButton("노란색");
+		b1.addActionListener(listener);
+		panel.add(b1);
+
+		b2=new JButton("핑크색");
+		b2.addActionListener(listener);
+		panel.add(b2);
+
+		f.add(panel);
+		f.setVisible(true);
+
+
+	}
+	class MyListener implements ActionListener
+	{
+		public void actionPerformed(ActionEvent e){
+			if(e.getSource()==b1){
+				panel.setBackground(Color.YELLOW);
+			}else if(e.getSource()==b2){
+				panel.setBackground(Color.PINK);}
+		}
+	}
+}

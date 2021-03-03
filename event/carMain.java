@@ -1,0 +1,17 @@
+import javax.swing.*;
+
+class carMain 
+{
+	JFrame f;
+
+	public carMain(String msg){
+		f=new JFrame(msg);
+		f.setSize(800,900);
+		f.add(new car());
+		f.setVisible(true);
+	}
+	public static void main(String[] args) 
+	{
+		new carMain("마우스 이벤트");
+	}
+}

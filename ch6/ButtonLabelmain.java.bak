@@ -1,0 +1,7 @@
+class ButtonLabelMain
+{
+	public static void main(String[] args) 
+	{
+		ButtonLabel b=new ButtonLabel();
+	}
+}

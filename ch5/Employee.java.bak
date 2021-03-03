@@ -1,0 +1,12 @@
+class Employee 
+{
+	String name;
+	String idnum;
+	String title;
+	int salary;
+
+	public Employee(String name,String idnum){
+		this.name=name;
+		this.idnum=idnum;
+	}
+}

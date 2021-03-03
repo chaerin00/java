@@ -1,0 +1,143 @@
+import java.awt.*;
+public class GridBagCal
+{
+	public GridBagCal(){
+		Frame f=new Frame("GridCal");
+		f.setLayout(new BorderLayout());
+		//Panel p1=new Panel();
+		//p1.add(new TextArea(2,30));
+		f.add("North",new TextArea(4,30));
+		//f.add("Center",new TextField(30));
+		//f.setLayout(new PositionLayout());
+		//f.add("0%,0%,100%,20%",new TextField(30));
+
+
+		Panel p2=new Panel();
+		GridBagLayout gridbag=new GridBagLayout();
+		GridBagConstraints c=new GridBagConstraints();
+		p2.setLayout(gridbag);
+		c.fill=GridBagConstraints.BOTH;
+		c.weightx=0.0;
+		c.ipadx=70;
+		c.ipady=70;
+
+		Button b1=new Button("c");
+		c.gridx=0;
+		c.gridy=0;
+		gridbag.setConstraints(b1,c);
+		p2.add(b1);
+
+		Button b2=new Button("/");
+		c.gridx=1;
+		c.gridy=0;
+		gridbag.setConstraints(b2,c);
+		p2.add(b2);
+
+		Button b3=new Button("X");
+		c.gridx=2;
+		c.gridy=0;
+		gridbag.setConstraints(b3,c);
+		p2.add(b3);
+
+		Button b4=new Button("DEL");
+		c.gridx=3;
+		c.gridy=0;
+		gridbag.setConstraints(b4,c);
+		p2.add(b4);
+
+		Button b5=new Button("7");
+		c.gridx=0;
+		c.gridy=1;
+		gridbag.setConstraints(b5,c);
+		p2.add(b5);
+
+		Button b6=new Button("8");
+		c.gridx=1;
+		c.gridy=1;
+		gridbag.setConstraints(b6,c);
+		p2.add(b6);
+
+		Button b7=new Button("9");
+		c.gridx=2;
+		c.gridy=1;
+		gridbag.setConstraints(b7,c);
+		p2.add(b7);
+		
+		Button b8=new Button("-");
+		c.gridx=3;
+		c.gridy=1;
+		gridbag.setConstraints(b8,c);
+		p2.add(b8);
+
+		Button b9=new Button("4");
+		c.gridx=0;
+		c.gridy=2;
+		gridbag.setConstraints(b9,c);
+		p2.add(b9);
+		Button b10=new Button("5");
+		c.gridx=1;
+		c.gridy=2;
+		gridbag.setConstraints(b10,c);
+		p2.add(b10);
+		Button b11=new Button("6");
+		c.gridx=2;
+		c.gridy=2;
+		gridbag.setConstraints(b11,c);
+		p2.add(b11);
+
+		
+		Button b12=new Button("+");
+		c.gridx=3;
+		c.gridy=2;
+		gridbag.setConstraints(b12,c);
+		p2.add(b12);
+
+		Button b13=new Button("1");
+		c.gridx=0;
+		c.gridy=3;
+		gridbag.setConstraints(b13,c);
+		p2.add(b13);
+		Button b14=new Button("2");
+		c.gridx=1;
+		c.gridy=3;
+		gridbag.setConstraints(b14,c);
+		p2.add(b14);
+		Button b16=new Button("3");
+		c.gridx=2;
+		c.gridy=3;
+		gridbag.setConstraints(b16,c);
+		p2.add(b16);
+		
+		c.gridheight=GridBagConstraints.REMAINDER;
+		Button b21=new Button("=");
+		c.gridx=3;
+		c.gridy=3;
+		gridbag.setConstraints(b21,c);
+		p2.add(b21);
+
+		Button b18=new Button(".");
+		c.gridx=0;
+		c.gridy=4;
+		gridbag.setConstraints(b18,c);
+		p2.add(b18);
+
+		Button b19=new Button("0");
+		c.gridx=1;
+		c.gridy=4;
+		gridbag.setConstraints(b19,c);
+		p2.add(b19);
+		Button b20=new Button("()");
+		c.gridx=2;
+		c.gridy=4;
+		gridbag.setConstraints(b20,c);
+		p2.add(b20);
+		
+
+		
+		//f.add("North",p1);
+		f.pack();
+		f.add(p2);
+		f.setSize(400,580);
+		f.setVisible(true);
+	}
+}
